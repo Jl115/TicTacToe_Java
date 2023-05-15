@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+TikTakToe.Main-Class: TikTakToe.Main
+
