@@ -32,9 +32,9 @@ public class Menu {
         System.out.printf(
                 "       TikTakToe.Menu       %n" +
                         "+----------------+%n" +
-                        "|1 - Start TikTakToe.Board.Game !|%n" +
-                        "|2 - TikTakToe.Settings    |%n" +
-                        "|3 - Close TikTakToe.Board.Game  |%n" +
+                        "|1 - Start Board !|%n" +
+                        "|2 - Settings    |%n" +
+                        "|3 - Close Game  |%n" +
                         "+----------------+%n" +
                         "please Enter a Number: ");
     }

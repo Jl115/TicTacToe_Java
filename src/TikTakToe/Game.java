@@ -34,7 +34,6 @@ public class Game {
 
     /**
      * Diese Methode überprüft, ob ein Spieler gewonnen hat.
-     *
      * symbol das Symbol des Spielers ('X' oder 'O'), für den geprüft werden soll.
      * @return true wenn der Spieler gewonnen hat, sonst false.
      */
@@ -101,7 +100,7 @@ public class Game {
     public static void cpuEasyMove() {
         int cpuEasyMove = 0;
         while (true) {
-            cpuEasyMove = Main.random.nextInt(1, 9);
+            cpuEasyMove = Main.random.nextInt(1, 10);
             if (Main.valid(Board.board, Integer.toString(cpuEasyMove))) {
                 break;
             }
