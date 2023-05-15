@@ -70,8 +70,8 @@ public class Game {
     public static void finishQuestion() {
         System.out.printf("You wanna play another ? %n" +
                 "1 - Yes!%n" +
-                "2 - To the TikTakToe.Main TikTakToe.Menu!%n" +
-                "3 - Quit TikTakToe.Board.Game");
+                "2 - To the Menu!%n" +
+                "3 - Quit Game");
 
         var playAgain = inputScanner.nextInt();
         if (playAgain == 1) {
