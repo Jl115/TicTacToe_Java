@@ -1,4 +1,4 @@
-package TikTakToe;
+package TikTakToe.Game;
 
 
 

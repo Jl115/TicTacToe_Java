@@ -1,28 +1,28 @@
-package TikTakToe;
+package TikTakToe.UI;
 
-import TikTakToe.Game;
-import TikTakToe.Settings;
+import TikTakToe.Game.Game;
+import TikTakToe.Main;
 
-import java.util.Scanner;
 
 public class Menu {
-    static Scanner inputScanner = new Scanner(System.in);
+
 
     //Menu Loop
     public static void menuLoop() {
             var start = true;
             while (start) {
                 menu();
-                int menuInput = inputScanner.nextInt();
+                int menuInput = Main.inputScanner.nextInt();
                 if (menuInput == 1) {
                     Game.game();
                     start = false;
                 } else if(menuInput == 2){
+                    Settings.settings = true;
                     Settings.settingsLoop();
                     start = false;
                 } else if (menuInput == 3) {
                     System.out.println("Goodbye !");
-                    inputScanner.close();
+                    Main.inputScanner.close();
                     System.exit(1);
                 }
             }
@@ -30,7 +30,7 @@ public class Menu {
     //printing out the menu
     public static void menu() {
         System.out.printf(
-                "       TikTakToe.Menu       %n" +
+                "       TikTakToe.UI.Menu       %n" +
                         "+----------------+%n" +
                         "|1 - Start Board !|%n" +
                         "|2 - Settings    |%n" +

@@ -1,9 +1,13 @@
-package TikTakToe;
+package TikTakToe.Game;
 
-import java.util.Scanner;
+
+import TikTakToe.*;
+import TikTakToe.UI.Menu;
+import TikTakToe.UI.Settings;
 
 public class Game {
-    static Scanner inputScanner = new Scanner(System.in);
+    public static boolean twoPlayer = true;
+    public static boolean minimax = false;
     /**
      * Diese Methode startet das Spiel und führt die Hauptspiel-Schleife aus.
      * Sie fragt die Spieler nach ihren Zügen und setzt sie auf dem Spielbrett, bis das Spiel endet.
@@ -13,16 +17,20 @@ public class Game {
         Board.printBoard(Board.board);
         while (true) {
             System.out.println("Player X chose (1 - 9):  ");
-            Main.playerMoveX(Board.board, 'X');
+            Checks.playerMoveX(Board.board, 'X');
             if (checkWin(Board.board)) {
                 break;
             }
             Board.printBoard(Board.board);
-            if (Settings.twoPlayer) {
+            if (twoPlayer) {
                 System.out.println("Player O chose (1 - 9):  ");
-                Main.playerMoveX(Board.board, 'O');
-            } else {
-                cpuEasyMove();
+                Checks.playerMoveX(Board.board, 'O');
+            } else if (twoPlayer){
+                Computer.cpuEasyMove();
+            } else if (minimax){
+                Computer.cpuMediumMove();
+            } else if (minimax) {
+                Computer.cpuHardMove();
             }
             if (checkWin(Board.board)) {
                 break;
@@ -39,14 +47,14 @@ public class Game {
      */
     public static boolean checkWin(char[][] board) {
         //Player X Won
-        if (Main.checkWin(board, 'X')) {
+        if (Checks.checkWin(board, 'X')) {
             Board.printBoard(board);
             System.out.println("Player X won !");
             finishQuestion();
             return true;
         }
         // Player O || CPU Won
-        if (Main.checkWin(board, 'O')) {
+        if (Checks.checkWin(board, 'O')) {
             Board.printBoard(board);
             System.out.println("Player O won!");
             finishQuestion();
@@ -73,7 +81,7 @@ public class Game {
                 "2 - To the Menu!%n" +
                 "3 - Quit Game");
 
-        var playAgain = inputScanner.nextInt();
+        var playAgain = Main.inputScanner.nextInt();
         if (playAgain == 1) {
             Board.board = new char[][]{
                     {' ', ' ', ' '},
@@ -89,24 +97,10 @@ public class Game {
             };
             Menu.menuLoop();
         } else if (playAgain == 3) {
-            inputScanner.close();
+            Main.inputScanner.close();
             System.exit(1);
         } else {
-            System.out.println("Invalid Number !");
+            System.out.println("Please Enter a Number from 1 - 9!");
         }
     }
-
-    //Easy CPU move with Random Numbers
-    public static void cpuEasyMove() {
-        int cpuEasyMove = 0;
-        while (true) {
-            cpuEasyMove = Main.random.nextInt(1, 10);
-            if (Main.valid(Board.board, Integer.toString(cpuEasyMove))) {
-                break;
-            }
-        }
-        System.out.println("Cpu chose: " + cpuEasyMove);
-        Main.move(Board.board, Integer.toString(cpuEasyMove), 'O');
-    }
-
 }
