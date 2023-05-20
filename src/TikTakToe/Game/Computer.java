@@ -42,9 +42,8 @@ public class Computer {
                     cpuMove = 8;
                 }else if (Board.board[2][0] == 'X' && Board.board[2][1] == 'X' && Board.board[2][2] == ' ') {
                     cpuMove = 9;
-                }
-                //checks for columns
-                if (Board.board[0][0] == 'X' && Board.board[1][0] == 'X' && Board.board[2][0] == ' ') {
+                    //checks for columns X
+                }else if (Board.board[0][0] == 'X' && Board.board[1][0] == 'X' && Board.board[2][0] == ' ') {
                     cpuMove = 7;
                 } else if (Board.board[0][0] == 'X' && Board.board[1][0] == ' ' && Board.board[2][0] == 'X') {
                     cpuMove = 4;
@@ -62,9 +61,8 @@ public class Computer {
                     cpuMove = 6;
                 }else if (Board.board[0][2] == 'X' && Board.board[1][2] == 'X' && Board.board[2][2] == ' ') {
                     cpuMove = 9;
-                }
-                // checks for diagonal
-                if (Board.board[0][0] == 'X' && Board.board[1][1] == 'X' && Board.board[2][2] == ' ') {
+                    // checks for diagonal X
+                }else if (Board.board[0][0] == 'X' && Board.board[1][1] == 'X' && Board.board[2][2] == ' ') {
                     cpuMove = 9;
                 } else if (Board.board[0][0] == 'X' && Board.board[1][1] == ' ' && Board.board[2][2] == 'X') {
                     cpuMove = 5;
@@ -75,6 +73,58 @@ public class Computer {
                 }else if (Board.board[0][2] == 'X' && Board.board[1][1] == ' ' && Board.board[2][0] == 'X') {
                     cpuMove = 5;
                 }else if (Board.board[0][2] == 'X' && Board.board[1][1] == 'X' && Board.board[2][0] == ' ') {
+                    cpuMove = 7;
+                    // checks for row O
+                }else if (Board.board[0][0] == 'O' && Board.board[0][1] == 'O' && Board.board[0][2] == ' ') {
+                    cpuMove = 3;
+                } else if (Board.board[0][0] == 'O' && Board.board[0][1] == ' ' && Board.board[0][2] == 'O') {
+                    cpuMove = 2;
+                }else if (Board.board[0][0] == ' ' && Board.board[0][1] == 'O' && Board.board[0][2] == 'O') {
+                    cpuMove = 1;
+                }else if (Board.board[1][0] == ' ' && Board.board[1][1] == 'O' && Board.board[1][2] == 'O') {
+                    cpuMove = 4;
+                }else if (Board.board[1][0] == 'O' && Board.board[1][1] == ' ' && Board.board[1][2] == 'O') {
+                    cpuMove = 5;
+                }else if (Board.board[1][0] == 'O' && Board.board[1][1] == 'O' && Board.board[1][2] == ' ') {
+                    cpuMove = 6;
+                }else if (Board.board[2][0] == ' ' && Board.board[2][1] == 'O' && Board.board[2][2] == 'X') {
+                    cpuMove = 7;
+                }else if (Board.board[2][0] == 'O' && Board.board[2][1] == ' ' && Board.board[2][2] == 'O') {
+                    cpuMove = 8;
+                }else if (Board.board[2][0] == 'O' && Board.board[2][1] == 'O' && Board.board[2][2] == ' ') {
+                    cpuMove = 9;
+
+                    //checks for columns O
+                }else if (Board.board[0][0] == 'O' && Board.board[1][0] == 'O' && Board.board[2][0] == ' ') {
+                    cpuMove = 7;
+                } else if (Board.board[0][0] == 'O' && Board.board[1][0] == ' ' && Board.board[2][0] == 'O') {
+                    cpuMove = 4;
+                }else if (Board.board[0][0] == ' ' && Board.board[1][0] == 'O' && Board.board[2][0] == 'O') {
+                    cpuMove = 1;
+                }else if (Board.board[0][1] == ' ' && Board.board[1][1] == 'O' && Board.board[2][1] == 'O') {
+                    cpuMove = 2;
+                }else if (Board.board[0][1] == 'O' && Board.board[1][1] == ' ' && Board.board[2][2] == 'O') {
+                    cpuMove = 5;
+                }else if (Board.board[0][1] == 'O' && Board.board[1][1] == 'O' && Board.board[2][1] == ' ') {
+                    cpuMove = 8;
+                }else if (Board.board[0][2] == ' ' && Board.board[1][2] == 'O' && Board.board[2][2] == 'O') {
+                    cpuMove = 3;
+                }else if (Board.board[0][2] == 'O' && Board.board[1][2] == ' ' && Board.board[2][2] == 'O') {
+                    cpuMove = 6;
+                }else if (Board.board[0][2] == 'O' && Board.board[1][2] == 'O' && Board.board[2][2] == ' ') {
+                    cpuMove = 9;
+                    // checks for diagonal O
+                }else if (Board.board[0][0] == 'O' && Board.board[1][1] == 'O' && Board.board[2][2] == ' ') {
+                    cpuMove = 9;
+                } else if (Board.board[0][0] == 'O' && Board.board[1][1] == ' ' && Board.board[2][2] == 'O') {
+                    cpuMove = 5;
+                }else if (Board.board[0][0] == ' ' && Board.board[1][1] == 'O' && Board.board[2][2] == 'O') {
+                    cpuMove = 1;
+                }else if (Board.board[0][2] == ' ' && Board.board[1][1] == 'O' && Board.board[2][0] == 'O') {
+                    cpuMove = 3;
+                }else if (Board.board[0][2] == 'O' && Board.board[1][1] == ' ' && Board.board[2][0] == 'O') {
+                    cpuMove = 5;
+                }else if (Board.board[0][2] == 'O' && Board.board[1][1] == 'O' && Board.board[2][0] == ' ') {
                     cpuMove = 7;
                 }
                 // it's checking the Number with my Valid method and breaks out of the Loop when en Empty field was found

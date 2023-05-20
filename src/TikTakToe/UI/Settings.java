@@ -13,7 +13,7 @@ public class Settings {
     public static void settingsLoop() {
             while (settings){
                 System.out.printf(
-                        "+----------------+%n" +
+                                "+----------------+%n" +
                                 "     Settings     %n" +
                                 "+----------------+%n" +
                                 "|1  -  Color    !|%n" +

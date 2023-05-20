@@ -30,7 +30,7 @@ public class Menu {
     //printing out the menu
     public static void menu() {
         System.out.printf(
-                "       TikTakToe.UI.Menu       %n" +
+                        "       Menu       %n" +
                         "+----------------+%n" +
                         "|1 - Start Board !|%n" +
                         "|2 - Settings    |%n" +

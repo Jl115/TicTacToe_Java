@@ -27,7 +27,7 @@ public class Game {
                 Checks.playerMoveX(Board.board, 'O');
             } else if (twoPlayer){
                 Computer.cpuEasyMove();
-            } else if (minimax){
+            } else if (!minimax){
                 Computer.cpuMediumMove();
             } else if (minimax) {
                 Computer.cpuHardMove();
